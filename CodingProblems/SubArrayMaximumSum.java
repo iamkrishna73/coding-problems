@@ -3,6 +3,20 @@ package CodingProblems;
 import java.util.Scanner;
 
 public class SubArrayMaximumSum {
+    public static int subArrayMaxSum(int [] array, int size){
+        int  res = 0;
+        int k = 3;   //5
+//        System.out.println(size);
+//        System.out.println(size - k);
+       for(int i = 0; i <= size - k; i++) {
+           int curSum = 0;
+           for(int j = i; j < k + i && j < size; j++) {
+               curSum += array[j];
+           }
+           res = Math.max(res, curSum);
+       }
+        return res;
+    }
     public static void main(String [] args){
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter a size Array: ");
@@ -12,20 +26,6 @@ public class SubArrayMaximumSum {
         for(int i = 0; i < arraySize; i++){
             arrayValues[i] = sc.nextInt();
         }
-        int temp = 0;
-        int [] newArray = new int[arraySize];
-        for(int i = 0; i < arraySize; i++){
-            for(int j = i; j < i + 3; j++){
-                temp += arrayValues[j];
-            }
-            newArray[i] = temp;
-        }
-        int max = newArray[0];
-        for(int i = 0; i < arraySize; i++){
-            if(newArray[i] > max){
-                max = newArray[i];
-            }
-        }
-        System.out.println(max);
+        System.out.println(subArrayMaxSum(arrayValues, arraySize));
     }
 }
