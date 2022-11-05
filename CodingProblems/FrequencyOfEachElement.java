@@ -4,6 +4,7 @@ import java.util.Scanner;
 public class FrequencyOfEachElement {
     public static void main(String [] args){
         Scanner sc = new Scanner(System.in);
+
         System.out.print("Enter a size Array: ");
         byte arraySize = sc.nextByte();
         int[] arrayValues = new int[arraySize];
