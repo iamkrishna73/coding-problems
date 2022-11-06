@@ -6,7 +6,7 @@ import java.io.IOException;
 public class FIleOutput {
     public static  void main(String [] args){
         try {
-            FileOutputStream fos = new FileOutputStream("c:/myJava/text.txt");
+            FileOutputStream fos = new FileOutputStream("C:/MyJava/text.txt");
             String str = "Learn Java Programming";
             fos.write(str.getBytes());
             fos.close();
