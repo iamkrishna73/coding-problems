@@ -21,12 +21,11 @@ public class ArrayReverse {
         System.out.print("Enter a Arrays Value: ");
         for(int i = 0; i < arraySize; i++){
             arrayValue[i] = sc.nextInt();
-;       }
+        }
         reverseArray(arrayValue, 0, arraySize -1);;
         for(int i = 0; i < arraySize; i++){
             System.out.print(arrayValue[i] + " ");
         }
-
 
     }
 }
